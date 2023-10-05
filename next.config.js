@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        domains: ["cdn.sanity.io"],
+    },
+};
+const withVideos = require("next-videos");
 
-module.exports = nextConfig
+module.exports = withVideos(nextConfig);
