@@ -6,7 +6,7 @@ const Home = () => {
         <section name="home" className="h-[100dvh] w-full relative">
             <div className="absolute inset-0 bg-black opacity-60 z-10 h-full" />
             <video
-                src={require("../../public/cyberpunk_city_night.mp4")}
+                src="/videos/cyberpunk_city_night.mp4"
                 autoPlay
                 loop
                 muted
@@ -16,11 +16,14 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row gap-2 md:gap-8 px-6 max-w-6xl mx-auto items-center justify-center h-full pt-10 sm:pt-0">
                     <div className="drop-shadow-[0_7px_25px_rgba(228,26,53,0.86)]">
                         <div className="cyber-tile animate-appearance-in border-2 border-red-500 text-slate-100 font-bold bg-red-950 flex flex-col justify-center gap-4 items-center p-1 sm:px-4 sm:pt-5">
-                            <Image
-                                src={avatar}
-                                alt="avatar"
-                                className="cyber-glitch-1 h-24 w-24 md:h-40 md:w-40 rounded-full object-cover object-top border-2 border-red-500 shadow-[0_7px_25px_rgba(228,26,53,0.86)]"
-                            />
+                            <div className="cyber-glitch-1 h-24 w-24 md:h-40 md:w-40 rounded-full object-cover object-top border-2 border-red-500 shadow-[0_7px_25px_rgba(228,26,53,0.86)]">
+                                <Image
+                                    fill
+                                    src={avatar}
+                                    alt="avatar"
+                                    className="rounded-full"
+                                />
+                            </div>
                             <h3 className="md:pt-4 md:pb-2 text-lg md:text-2xl font-bold leading-8 tracking-tight">
                                 Nassim
                             </h3>
