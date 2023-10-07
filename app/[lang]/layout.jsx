@@ -24,8 +24,8 @@ export default async function RootLayout({ children, params }) {
                     <main className="w-full min-h-screen bg-black-pearl">
                         {children}
                     </main>
-                    <Analytics />
                 </Providers>
+                <Analytics />
             </body>
         </html>
     );
