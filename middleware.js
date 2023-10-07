@@ -28,14 +28,17 @@ export function middleware(request) {
 
     // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
     // // If you have one
-    // if (
-    //   [
-    //     '/manifest.json',
-    //     '/favicon.ico',
-    //     // Your other files in `public`
-    //   ].includes(pathname)
-    // )
-    //   return
+    if (
+        [
+            "/manifest.json",
+            "/favicon.ico",
+            // Your other files in `public`
+            "/videos/cyberpunk_city_night.mp4",
+            "/avatar_cyberpunk.jpeg",
+            "/cv_nassim.pdf",
+        ].includes(pathname)
+    )
+        return;
 
     // Check if there is any supported locale in the pathname
     const pathnameIsMissingLocale = i18n.locales.every(

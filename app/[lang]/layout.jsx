@@ -3,6 +3,7 @@ import Providers from "./components/Providers";
 import "./globals.css";
 import "./cyberpunk.css";
 import { getDictionary } from "@/lib/dictionaries";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
     title: "Portfolio | Nassim",
@@ -23,6 +24,7 @@ export default async function RootLayout({ children, params }) {
                     <main className="w-full min-h-screen bg-black-pearl">
                         {children}
                     </main>
+                    <Analytics />
                 </Providers>
             </body>
         </html>

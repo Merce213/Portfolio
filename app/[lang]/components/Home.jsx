@@ -1,13 +1,12 @@
 import Image from "next/image";
 import avatar from "../../../public/avatar_cyberpunk.jpeg";
-import video from "../../../public/videos/cyberpunk_city_night.mp4";
 
 const Home = ({ lang }) => {
     return (
         <section name="home" className="h-[100dvh] w-full relative">
             <div className="absolute inset-0 bg-black opacity-60 z-10 h-full" />
             <video
-                src={video}
+                src="/videos/cyberpunk_city_night.mp4"
                 autoPlay
                 loop
                 muted
