@@ -1,12 +1,13 @@
 import Image from "next/image";
-import avatar from "../../public/avatar_cyberpunk.jpeg";
+import avatar from "../../../public/avatar_cyberpunk.jpeg";
+import video from "../../../public/videos/cyberpunk_city_night.mp4";
 
-const Home = () => {
+const Home = ({ lang }) => {
     return (
         <section name="home" className="h-[100dvh] w-full relative">
             <div className="absolute inset-0 bg-black opacity-60 z-10 h-full" />
             <video
-                src="/videos/cyberpunk_city_night.mp4"
+                src={video}
                 autoPlay
                 loop
                 muted
@@ -28,8 +29,7 @@ const Home = () => {
                                 Nassim
                             </h3>
                             <p className="text-slate-100 text-center oxanium-font">
-                                Hey my name is Nassim and I am a Full Stack
-                                Developer
+                                {lang.page.home.description}
                             </p>
 
                             <div className="flex space-x-5 md:pt-6">
@@ -69,7 +69,7 @@ const Home = () => {
                                         <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9A7.2 7.2 0 01194 256h648.8a7.2 7.2 0 014.4 12.9z" />
                                     </svg>
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="/cv_nassim.pdf" target="_blank">
                                     <svg
                                         viewBox="0 0 1024 1024"
                                         fill="currentColor"
@@ -82,27 +82,11 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="drop-shadow-[0_7px_25px_rgba(228,26,53,0.86)]">
-                        <div className="cyber-tile-big animate-appearance-in border-2 border-red-500 text-slate-100 font-bold bg-red-950 flex flex-col justify-center gap-4 items-center px-4 pt-5">
+                        <div className="cyber-tile-big animate-appearance-in border-2 border-red-500 text-slate-100 font-bold bg-red-950 flex flex-col justify-center gap-1 md:gap-3 items-center px-4 pt-5">
+                            <p>{lang.page.home.descriptionP1}</p>
+                            <p>{lang.page.home.descriptionP2}</p>
                             <p>
-                                Hey everyone my name is Nassim, I am 21 years
-                                old. I am a Full Stack developer based in Lyon,
-                                France.
-                            </p>
-                            <p>
-                                I have a passion for building Full Stack
-                                applications with React and enjoy working on
-                                personal projects, even if they are not always
-                                completed. I find it fulfilling to embark on
-                                these personal ventures as they provide valuable
-                                learning experiences.
-                            </p>
-                            <p>
-                                Developing applications and exploring personal
-                                projects for the sake of learning is the perfect
-                                combination of creative expression, technical
-                                expertise, and personal growth for me. I am
-                                excited to continue this journey and refine my
-                                skills
+                                {lang.page.home.descriptionP3}
                                 <span className="cyber-glitch-3">.</span>
                             </p>
                         </div>

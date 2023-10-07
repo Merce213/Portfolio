@@ -1,0 +1,34 @@
+{
+    "navigation": {
+        "home": "Accueil",
+        "about": "À propos",
+        "projects": "Projets",
+        "contact": "Contact"
+    },
+    "page": {
+        "home": {
+            "description": "Hey, je m'appelle Nassim et je suis un Développeur Web Fullstack",
+            "descriptionP1": "Salut à tous, je m'appelle Nassim, j'ai 21 ans. Je suis un développeur Full Stack basé à Lyon, en France.",
+            "descriptionP2": "J'ai une passion pour la création d'applications Full Stack avec React et j'apprécie travailler sur des projets personnels, même s'ils ne sont pas toujours achevés. Je trouve cela enrichissant de me lancer dans ces aventures personnelles car elles offrent des expériences d'apprentissage précieuses.",
+            "descriptionP3": "Développer des applications et explorer des projets personnels dans le but d'apprendre représentent pour moi la combinaison parfaite entre expression créative, expertise technique et développement personnel. Je suis enthousiaste à l'idée de poursuivre ce parcours et de perfectionner mes compétences"
+        },
+        "about": {
+            "title": "À propos de moi",
+            "descriptionP1": "Je suis un grand utilisateur d'internet depuis petit. Ma curiosité sur le fonctionnement des sites web m'a poussé à explorer le développement web. J'ai suivi une formation de 10",
+            "descriptionP2": "mois à la Web@cadémie by Epitech, où j'ai acquis les bases. Aujourd'hui, je suis impatient de poursuivre mon apprentissage grâce à un nouveau programme en alternance, dans le but d'obtenir un diplôme ou de saisir une opportunité au sein d'une entreprise ouverte aux développeurs juniors sans expérience préalable."
+        },
+        "projects": {
+            "title": "Projets",
+            "description": "Voici quelques projets sur lesquels j'ai travaillé. Vous pouvez en voir plus sur mon github."
+        },
+        "contact": {
+            "placeholder": {
+                "name": "Nom",
+                "email": "Email",
+                "subject": "Objet",
+                "message": "Message"
+            },
+            "button": "Envoyer"
+        }
+    }
+}

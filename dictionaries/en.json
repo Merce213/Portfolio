@@ -1,0 +1,34 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "About Me",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "page": {
+        "home": {
+            "description": "Hey my name is Nassim and I am a Full Stack Developer",
+            "descriptionP1": "Hey everyone my name is Nassim, I am 21 years old. I am a Full Stack developer based in Lyon, France.",
+            "descriptionP2": "I have a passion for building Full Stack applications with React and enjoy working on personal projects, even if they are not always completed. I find it fulfilling to embark on these personal ventures as they provide valuable learning experiences.",
+            "descriptionP3": "Developing applications and exploring personal projects for the sake of learning is the perfect combination of creative expression, technical expertise, and personal growth for me. I am excited to continue this journey and refine my skills"
+        },
+        "about": {
+            "title": "About Me",
+            "descriptionP1": "I've been a keen internet user since I was a child. My curiosity about how websites functioned led me to explore web development. I took a 10",
+            "descriptionP2": "month course at Web@cadémie by Epitech, where I acquired the fundamentals. Now, I'm eager to continue my learning journey through a new apprenticeship program, aiming to earn a degree or seize an opportunity with an open-minded company that welcomes junior developers with no prior experience."
+        },
+        "projects": {
+            "title": "Projects",
+            "description": "Here are some of the projects I've worked on. You can see more on my github."
+        },
+        "contact": {
+            "placeholder": {
+                "name": "Name",
+                "email": "Email",
+                "subject": "Subject",
+                "message": "Message"
+            },
+            "button": "Send"
+        }
+    }
+}

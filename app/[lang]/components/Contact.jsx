@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-const Contact = () => {
+const Contact = ({ lang }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -60,25 +60,25 @@ const Contact = () => {
                         <input
                             type="text"
                             name="fullname"
-                            placeholder="Entrer votre nom"
+                            placeholder={lang.page.contact.placeholder.name}
                             className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
                         />
                         <input
                             type="email"
                             name="senderEmail"
-                            placeholder="Entrer votre email"
+                            placeholder={lang.page.contact.placeholder.email}
                             className="p-2 my-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
                         />
                         <input
                             type="text"
                             name="subject"
-                            placeholder="subject"
+                            placeholder={lang.page.contact.placeholder.subject}
                             className="p-2 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
                         />
                         <textarea
                             name="message"
                             rows="10"
-                            placeholder="Entrer votre message"
+                            placeholder={lang.page.contact.placeholder.message}
                             className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none resize-none"
                         ></textarea>
 
@@ -86,7 +86,7 @@ const Contact = () => {
                             type="submit"
                             className="text-white bg-gradient-to-b from-cyan-300 to-teal-700 px-6 py-3 mt-3 mx-auto flex items-center rounded-md hover:scale-110 hover:from-rose-400 hover:to-red-600 hover:text-[#101010] duration-300"
                         >
-                            Envoyer
+                            {lang.page.contact.button}
                         </button>
                     </form>
                 </div>

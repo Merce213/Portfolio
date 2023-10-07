@@ -12,24 +12,24 @@ import {
 import { Link } from "react-scroll";
 import { useState } from "react";
 
-const Nav = () => {
+const Nav = ({ lang }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = [
         {
-            name: "Home",
+            name: lang.navigation.home,
             href: "home",
         },
         {
-            name: "About Me",
+            name: lang.navigation.about,
             href: "about-me",
         },
         {
-            name: "Projects",
+            name: lang.navigation.projects,
             href: "projects",
         },
         {
-            name: "Contact",
+            name: lang.navigation.contact,
             href: "contact",
         },
     ];

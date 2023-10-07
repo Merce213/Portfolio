@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { client } from "../lib/sanity";
+import Link from "next/link";
 
 const getProjects = async () => {
     const query = `*[_type == "project"] {
@@ -17,16 +18,21 @@ const getProjects = async () => {
     return data;
 };
 
-const Projects = async () => {
+const Projects = async ({ lang }) => {
     const data = await getProjects();
 
     return (
         <section name="projects" className="md:min-h-[100dvh] w-full">
             <div className="h-full w-full flex flex-col justify-center pt-20 pb-5 gap-4">
-                <div>
+                <div className="flex flex-col gap-8">
                     <div className="cyber-banner-short bg-red max-w-3xl float-left">
                         <p className="w-full text-[#101010] oxanium-font">
-                            Projects
+                            {lang.page.projects.title}
+                        </p>
+                    </div>
+                    <div className="max-w-6xl mx-auto px-6 w-full">
+                        <p className="text-slate-100 text-left">
+                            {lang.page.projects.description}
                         </p>
                     </div>
                 </div>
@@ -47,17 +53,17 @@ const Projects = async () => {
                             </div>
 
                             <div className="p-4 sm:p-6">
-                                <a href={project.link} target="_blank">
+                                <Link href={project.link} target="_blank">
                                     <h3 className="text-lg font-medium text-slate-100 oxanium-font">
                                         {project.title}
                                     </h3>
-                                </a>
+                                </Link>
 
                                 <p className="line-clamp-4 mt-2 text-sm leading-relaxed text-slate-100">
                                     {project.overview}
                                 </p>
 
-                                <a
+                                <Link
                                     href={project.link}
                                     target="_blank"
                                     className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-cyan-300"
@@ -66,7 +72,7 @@ const Projects = async () => {
                                     <span className="block transition-all group-hover:ms-0.5">
                                         &rarr;
                                     </span>
-                                </a>
+                                </Link>
                             </div>
                         </article>
                     ))}

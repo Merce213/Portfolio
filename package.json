@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.4.2",
     "@nextui-org/react": "^2.1.13",
     "autoprefixer": "10.4.15",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
     "framer-motion": "^10.16.4",
+    "negotiator": "^0.6.3",
     "next": "13.5.1",
     "next-sanity": "^5.5.4",
     "next-videos": "^1.4.1",
