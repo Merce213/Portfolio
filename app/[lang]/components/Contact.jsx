@@ -11,8 +11,6 @@ const Contact = ({ lang }) => {
         formState: { errors },
     } = useForm();
     const onSubmit = async (data) => {
-        console.log(data);
-
         await fetch("/api/send-email", {
             method: "POST",
             headers: {
