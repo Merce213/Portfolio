@@ -11,6 +11,8 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "react-scroll";
 import { useState } from "react";
+import Image from "next/image";
+import logo from "../../../public/logo.png";
 
 const Nav = ({ lang }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,10 +50,15 @@ const Nav = ({ lang }) => {
             isBlurred={isMenuOpen}
         >
             <NavbarContent>
-                <NavbarBrand>
+                <NavbarBrand className="gap-5">
                     <h1 className="font-bold cyberpunk-font-og text-3xl">
                         Merce
                     </h1>
+                    <Image
+                        src={logo}
+                        alt="logo"
+                        className="w-10 h-10 hidden md:block cyber-glitch-4"
+                    />
                 </NavbarBrand>
             </NavbarContent>
 
@@ -78,6 +85,11 @@ const Nav = ({ lang }) => {
             />
 
             <NavbarMenu className="bg-black-pearl gap-6 flex justify-center items-center">
+                <Image
+                    src={logo}
+                    alt="logo"
+                    className="w-12 h-12 block md:hidden"
+                />
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem
                         key={item.name}

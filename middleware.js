@@ -36,6 +36,7 @@ export function middleware(request) {
             "/videos/cyberpunk_city_night.mp4",
             "/avatar_cyberpunk.jpeg",
             "/cv_nassim.pdf",
+            "/logo.png",
         ].includes(pathname)
     )
         return;

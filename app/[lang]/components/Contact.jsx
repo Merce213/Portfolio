@@ -1,26 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
+import { useForm } from "react-hook-form";
+
 const Contact = ({ lang }) => {
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const data = {
-            fullname: e.target.fullname.value,
-            senderEmail: e.target.senderEmail.value,
-            subject: e.target.subject.value,
-            message: e.target.message.value,
-        };
-
-        // data should be required and not empty
-        if (
-            !data.fullname ||
-            !data.senderEmail ||
-            !data.subject ||
-            !data.message
-        ) {
-            return;
-        }
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm();
+    const onSubmit = async (data) => {
+        console.log(data);
 
         await fetch("/api/send-email", {
             method: "POST",
@@ -30,7 +21,7 @@ const Contact = ({ lang }) => {
             body: JSON.stringify(data),
         });
 
-        e.target.reset();
+        reset();
     };
 
     return (
@@ -54,32 +45,67 @@ const Contact = ({ lang }) => {
 
                 <div className="flex justify-center items-center px-6">
                     <form
-                        onSubmit={handleSubmit}
+                        onSubmit={handleSubmit(onSubmit)}
                         className="flex flex-col w-full md:w-1/2"
                     >
+                        {errors.fullname?.type === "required" && (
+                            <span className="text-red-500">
+                                {lang.page.contact.errors.name}
+                            </span>
+                        )}
                         <input
                             type="text"
                             name="fullname"
                             placeholder={lang.page.contact.placeholder.name}
-                            className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                            className="p-2 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                            {...register("fullname", { required: true })}
                         />
+
+                        {errors.senderEmail?.type === "required" && (
+                            <span className="text-red-500">
+                                {lang.page.contact.errors.email}
+                            </span>
+                        )}
+                        {errors.senderEmail?.type === "pattern" && (
+                            <span className="text-red-500">
+                                {lang.page.contact.errors.emailFormat}
+                            </span>
+                        )}
                         <input
                             type="email"
                             name="senderEmail"
                             placeholder={lang.page.contact.placeholder.email}
-                            className="p-2 my-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                            className="p-2 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                            {...register("senderEmail", {
+                                required: true,
+                                pattern: /^\S+@\S+\.\S+$/i,
+                            })}
                         />
+
+                        {errors.subject?.type === "required" && (
+                            <span className="text-red-500">
+                                {lang.page.contact.errors.subject}
+                            </span>
+                        )}
                         <input
                             type="text"
                             name="subject"
                             placeholder={lang.page.contact.placeholder.subject}
                             className="p-2 mb-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                            {...register("subject", { required: true })}
                         />
+
+                        {errors.message && (
+                            <span className="text-red-500">
+                                {lang.page.contact.errors.message}
+                            </span>
+                        )}
                         <textarea
                             name="message"
                             rows="10"
                             placeholder={lang.page.contact.placeholder.message}
                             className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none resize-none"
+                            {...register("message", { required: true })}
                         ></textarea>
 
                         <button

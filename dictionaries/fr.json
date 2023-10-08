@@ -28,6 +28,13 @@
                 "subject": "Objet",
                 "message": "Message"
             },
+            "errors": {
+                "name": "Ce champ est requis",
+                "email": "Ce champ est requis",
+                "emailFormat": "Veuillez entrer un email valide",
+                "subject": "Ce champ est requis",
+                "message": "Ce champ est requis"
+            },
             "button": "Envoyer"
         }
     }

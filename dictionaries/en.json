@@ -28,6 +28,13 @@
                 "subject": "Subject",
                 "message": "Message"
             },
+            "errors": {
+                "name": "This field is required",
+                "email": "This field is required",
+                "emailFormat": "This field must be a valid email",
+                "subject": "This field is required",
+                "message": "This field is required"
+            },
             "button": "Send"
         }
     }
